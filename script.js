@@ -1,169 +1,122 @@
-"use strict";
-//------- let -------
-// let a;
-// let a = 10;
-// let str = "Hello";
-// let isActive = true;
-// console.log(typeof a);
-// console.log(typeof str);
-// console.log(typeof isActive);
+// const arr = ["one", "two", "three"];
 
-//-------- const -----
+// arr.push("four"); // метод push для дбавления в массив новых елементов
 
-// const a = 10;
-// const b = 21;
+// arr.unshift("start arr");
 
-// console.log(a + b);
+// arr.shift();
+// arr.pop();
+// console.log(arr);
 
-// const x = a + b;
+/* изначально просто строка */
+// const string =
+//   "Electron Fiddle lets you create and play with small Electron experiments. It greets you with a quick-start template after opening – change a few things, choose the version of Electron you want to run it with, and play around . Then, save your Fiddle either as a GitHub Gist or to a local folder. Once pushed to GitHub, anyone can quickly try your Fiddle out by just entering it in the address bar.";
 
-// console.log(x);
+// // const hesUser = prompt("enter word ...");
 
-// const words = "Стандартом языка JavaScript является ECMAScript".toLowerCase()
-//   .length;
+/* метод split(' ') розбивает по словесно и возвращает новый массив и каждое слово в нем через розделитель */
+// const stringArr = string.split(" ");
 
-// console.log(words > 50);
+// console.log(stringArr.reverse()); // розварачиваем массив
+// stringArr[2] = "rename".toUpperCase();
 
-// console.log(null);
+// console.log(stringArr);
 
-// let str = "";
-// let num = 0;
+// const newArr = stringArr.slice();
 
-// console.log(str);
-// console.log(num);
+// console.log("new", newArr);
 
-// let hasUserInfo = Number(prompt("enter numbers ...."));
+/* исрользуем метод includes для поиска по совпадению */
 
-// // console.log(hasUserInfo);
-
-// let result = hasUserInfo * 2;
-
-// console.log(`результат prompt ${result}`);
-
-// let info = confirm("are you want ????)");
-
-// console.log(info);
-
-// if (info) {
-//   let hasUserInfo = Number(prompt("enter numbers ...."));
-
-//   let result = hasUserInfo * 2;
-//   console.log(`результат prompt ${result}`);
+// if (stringArr.includes(hesUser)) {
+//   alert(`find ${hesUser}`);
 // } else {
-//   console.log("sorry");
+//   alert(`not found ${hesUser} `);
 // }
 
-//---------- day 2 -----
-
-// const num = Number("7");
-// console.log(typeof num);
-
-// let a = 0;
-
-// let hasNumber = prompt("enter numbers  ...");
-
-// console.log(hasNumber);
-
-// hasNumber = 1;
-
-// console.log(hasNumber);
-
-// let a = 10;
-
-// if (a > 9) {
-//   alert("меньше 10");
-// } else {
-//   alert("wrong");
+// if (stringArr.includes(hesUser)) {
+//   const result = stringArr.indexOf(hesUser);
+//   stringArr[result] = "rename".toUpperCase();
+//   console.log(stringArr);
 // }
 
-// const startTime = confirm("are you whant play eith me ?? ");
+/* работаем с методром slice*/
+// const arrCopy = stringArr.slice();
 
-// if (startTime) {
-//   const time = prompt("entter time ...");
-
-//   if (time <= 15) {
-//     alert("1");
-//   } else if (time > 15 && time <= 30) {
-//     alert("2");
-//   } else if (time > 30 && time <= 45) {
-//     alert("3");
-//   } else if (time > 45 && time <= 60) {
-//     console.log("4");
-//   } else {
-//     alert("more then 60");
-//   }
-// } else {
-//   alert("why ?????");
-// }
-
-// let time = prompt("entter time ...");
-
-// let numberTime = Number(time);
-
-// console.log(typeof time);
-// console.log(typeof numberTime);
-
-// if (time !== null) {
-//   if (numberTime <= 15) {
-//     alert("1");
-//   } else if (numberTime > 15 && numberTime <= 30) {
-//     alert("2");
-//   } else if () {
-//     alert("3");
-//   } else if (numberTime > 45 && numberTime <= 60) {
-//     console.log("4");
-//   } else {
-//     alert("more then 60");
-//   }
-// } else {
-//   alert("отказался играть");
-// }
-
-// const result = numberTime <= 15 ? true : false;
-
+// result.splice(10, 1, "DELETE");
 // console.log(result);
 
-// let season = prompt("enter seasons ...");
-
-// let result = null;
-
-// if (season !== null) {
+// if (arrCopy.includes(hesUser)) {
+//   const ind = arrCopy.indexOf(hesUser);
+//   arrCopy.splice(ind, 1, "DELETE", "new", "double");
+//   console.log(arrCopy);
 // }
 
-// switch (season) {
-//   case "summer":
-//     result = 3;
-//     break;
-//   case "winter":
-//     result = 1;
-//     break;
-//   case "spring":
-//     result = 2;
-//     break;
-//   case "autumn":
-//     result = 4;
-//     break;
-//   default:
-//     result = "not found";
+// const string =
+//   "Electron Fiddle lets you create and play with small Electron experiments. It greets you with a quick-start template after opening – change a few things, choose the version of Electron you want to run it with, and play around . Then, save your Fiddle either as a GitHub Gist or to a local folder. Once pushed to GitHub, anyone can quickly try your Fiddle out by just entering it in the address bar.";
+
+// const stringArr = string.split(" ");
+/*метод slice главное помнить, что метод мутирует исходный массив */
+
+// console.log(stringArr);
+
+// const firstTen = stringArr.slice(0, 10);
+
+// console.log(firstTen);
+
+// const lastTen = stringArr.slice(63);
+// console.log(lastTen);
+
+// const newArr = firstTen.concat(lastTen);
+// console.log("new arr", newArr);
+
+/*спред оператор, с его помощью можно достать все елементы и копировать в новый массив */
+// const arrMass = [...firstTen, ...lastTen];
+// // new arr
+// console.log(arrMass);
+
+// if (Array.isArray(arrMass)) {
+//   console.log("its true its arr");
 // }
 
-const str = prompt("enter word").toLowerCase();
-console.log(str);
+// const hesUser = prompt("enter word ...");
+// console.log(typeof hesUser);
+// if (typeof hesUser === "string") {
+//   console.log("its string");
+// }
+// let counter = 1;
+// let total = 0;
 
-let polindrom = str
-  .split("")
-  .reverse()
-  .join("");
+/*работа с циклом while  */
+/*работа с циклом do while  */
 
-console.log(polindrom);
+// const count = Number(prompt("enter number"));
+// const arr = [];
+// while (counter <= count) {
+//   console.log(counter);
+//   counter++;
+//   const hesUser = Number(prompt("enter number"));
+//   arr.push(hesUser);
+//   total = total + hesUser;
+// }
 
-if (str === polindrom) {
-  alert("polindrom");
-} else {
-  alert("error");
-}
+// console.log(arr);
+// console.log("summ : ", total);
 
-// console.log(
-//   str[0].toUpperCase() + str.slice(1, str.length - 1) + str[str.length - 1].toUpperCase());
+// let count;
+// let counter = 0;
+// const countArr = [];
+// const numberArr = [];
+// do {
+//   count = prompt("enter number");
+//   let newCount = Number(count);
+//   counter++;
 
-// console.log(str.slice(1));
+//   countArr.push(counter);
+//   if (count !== null) {
+//     numberArr.push(newCount);
+//   }
+// } while (count !== null);
+
+// console.log(countArr);
+// console.log(numberArr);
