@@ -428,25 +428,94 @@
 
 // add(1, 2, 3, 34, 5);
 
-const name = "name";
+// const name = "name";
 
-const user = {
-  [name]: "Bond",
-  lastName: "James",
-  age: 50,
-  isActive: true,
-  cars: ["audi", "jaguar", "aston martin"],
-  show: function() {
-    console.log(user.name);
-  },
-  plus: function(num) {
-    user.age = user.age + num;
-  }
-};
+// const user = {
+//   [name]: "Bond",
+//   lastName: "James",
+//   age: 50,
+//   isActive: true,
+//   cars: ["audi", "jaguar", "aston martin"]
+// };
 
-console.log(user.age);
-user.plus(10);
-console.log(user.age);
-user.plus(20);
-user.plus(100);
-console.log(user.age);
+// console.log(user.age);
+// user.plus(10);
+// console.log(user.age);
+// user.plus(20);
+// user.plus(100);
+// console.log(user.age);
+
+// user.work = true;
+
+// delete user.age;
+
+// console.log(user);
+
+// const users = [
+//   {
+//     [name]: "Bond",
+//     age: 50,
+//     isActive: true,
+//     cars: ["audi", "jaguar", "aston martin"]
+//   },
+//   {
+//     [name]: "Jack",
+//     age: 16,
+//     isActive: false,
+//     cars: ["audi", "jaguar"]
+//   },
+//   {
+//     [name]: "Flash",
+//     age: 20,
+//     isActive: true,
+//     cars: ["audi", "jaguar"]
+//   },
+//   {
+//     [name]: "Bird",
+//     age: 10,
+//     isActive: false,
+//     cars: ["audi", "jaguar", "aston martin"]
+//   },
+//   {
+//     [name]: "Anna",
+//     age: 30,
+//     isActive: true,
+//     cars: ["audi", "jaguar", "aston martin"]
+//   }
+// ];
+
+// const fn = (someUsers, x) => {
+//   const arr = [];
+//   for (let user of someUsers) {
+//     if (!user[x]) {
+//       arr.push(user);
+//     }
+//   }
+//   return arr;
+// };
+
+// const result = fn(users, "isActive");
+// console.log(result);
+
+// const Bond = {
+//   apple: 20,
+//   juice: 50,
+//   nuts: 30,
+//   milk: 2
+// };
+
+// // let start = 0;
+// // for (let user in Bond) {
+// //   start += Bond[user];
+// //   console.log(Bond[user]);
+// // }
+
+// // console.log(start);
+
+// const fruits = Object.entries(Bond);
+
+// console.log(fruits);
+
+// for (let key of fruits) {
+//   console.log(key[0], "<---->", key[1]);
+// }
