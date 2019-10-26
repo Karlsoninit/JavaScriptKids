@@ -520,7 +520,7 @@
 //   console.log(key[0], "<---->", key[1]);
 // }
 
-[
+const products = [
   {
     id: "XWaQXcbk0",
     name: "Картофель, запеченный в мундире",
@@ -579,7 +579,7 @@
     image:
       "https://s1.eda.ru/StaticContent/Photos/120131111301/140324110953/p_O.jpg",
     price: 170,
-    ingredients: "Голубика"
+    ingredients: "Маслины"
   },
   {
     id: "nk3zy1pf8",
@@ -589,7 +589,7 @@
     image:
       "https://s2.eda.ru/StaticContent/Photos/160105153525/160110193232/p_O.jpg",
     price: 270,
-    ingredients: "Говядина"
+    ingredients: "Маслины"
   },
   {
     id: "b7k2U13fd",
@@ -602,3 +602,169 @@
     ingredients: "рис"
   }
 ];
+
+// console.log(products);
+
+// const findIngredients = (prod, findWord) => {
+//   let arrProduct = [];
+
+//   for (let product of prod) {
+//     if (product.ingredients === findWord) {
+//       const container = document.querySelector(".container");
+//       container.innerHTML += `<div><h2>${product.name}</h2><img width='300' src='${product.image}'/></div>`;
+//       arrProduct.push(product);
+//     }
+//   }
+//   return arrProduct;
+// };
+
+// const result = findIngredients(products, "рис");
+
+// console.log(result);
+
+// console.log(document.body);
+
+// for (let product of products) {
+//   const result = Object.values(product);
+//   console.log(result);
+// }
+
+// const school = {
+//   math: 20,
+//   history: 10,
+//   physics2: 50,
+//   physics3: 10,
+//   physics4: 10,
+//   physics: 30
+// };
+
+// const allMark = mark => {
+//   let total = 0;
+//   const allMarks = Object.values(mark);
+//   for (let all of allMarks) {
+//     // console.log(all);
+//     total += all;
+//   }
+//   return Math.round(total / allMarks.length);
+// };
+
+// const result = allMark(school);
+
+// console.log(result);
+
+// const peoples = ["Anna", "Maksim", "Bond", "Jack", "SomeNewName"];
+
+// const randomName = names => {
+//   const random = Math.floor(Math.random() * names.length);
+//   return names[random];
+// };
+
+// const resultRandom = randomName(peoples);
+
+// console.log(resultRandom);
+
+// const blackOlives = {
+//   id: "nk3zy1pf8",
+//   name: "Азу по‑татарски",
+//   description:
+//     "Одно из немногих блюд, удостоившихся в советской продуктовой традиции продажи с именной нарезкой. И до сих пор в кулинариях и супермаркетах можно найти говядину, которую режут соломкой и продают как азу. Насчет самого блюда до сих пор идут споры, как и с чем готовить: использовать говядину или баранину, топленое или обычное масло, тушить в казане или сотейнике с толстым дном. Редакций этого блюда может быть много, но основа его всегда неизменна — это нарезанное соломкой мясо, картофель и томатный соус.",
+//   image:
+//     "https://s2.eda.ru/StaticContent/Photos/160105153525/160110193232/p_O.jpg",
+//   price: 270,
+//   ingredients: "Маслины"
+// };
+
+// const tomato = {
+//   id: "pkXzyRp1P",
+//   name: "Томатный магрибский суп",
+//   description:
+//     "Томатный магрибский суп особенно распространен в Марокко и Тунисе. Он весьма прост в приготовлении и сам по себе легкий — в основе томаты и куриный бульон. Кроме них в супе только необходимые специи, мед и лимон, которые все вместе и передают тот самый восточный колорит. Вкус супа всецело зависит от качества томатов. Дополнят блюдо свежая кинза и отдельные дольки лимона.",
+//   image:
+//     "https://avatars.mds.yandex.net/get-pdb/38069/eec6be2c-700e-40ae-847c-d6f5178b1e17/s1200",
+//   price: 150,
+//   ingredients: "Помидоры"
+// };
+
+// const blackOlives = {
+//   id: "nk3zy1pf8",
+//   name: "Азу по‑татарски"
+// };
+
+// const tomato = {
+//   id: "999999",
+//   description:
+//     "Томатный магрибский суп особенно распространен в Марокко и Тунисе. Он весьма прост в приготовлении и сам по себе легкий — в основе томаты и куриный бульон. Кроме них в супе только необходимые специи, мед и лимон, которые все вместе и передают тот самый восточный колорит. Вкус супа всецело зависит от качества томатов. Дополнят блюдо свежая кинза и отдельные дольки лимона.",
+//   image:
+//     "https://avatars.mds.yandex.net/get-pdb/38069/eec6be2c-700e-40ae-847c-d6f5178b1e17/s1200",
+//   price: 150,
+//   ingredients: "Помидоры"
+// };
+
+// const newObj = Object.assign({}, tomato, blackOlives);
+
+// console.log(newObj);
+
+// const form = document.querySelector("form");
+// console.log(form.elements[0].value);
+
+const defaultProfile = {
+  id: "nk3zy1pf8"
+};
+
+defaultProfile.name = "Bond";
+// console.log(defaultProfile);
+
+const blackOlives = {
+  name: "Азу по‑татарски"
+};
+
+const superBond = {
+  name: "Bond",
+  age: 14,
+  isActive: true,
+  nickName: "superBond",
+  car: true
+};
+
+// const profile = Object.assign({}, defaultProfile, superBond, blackOlives);
+// console.log(profile);
+
+// const profile = { ...defaultProfile, ...superBond, some: "some name" };
+
+// console.log(profile);
+
+/*  
+  Напиши функцию countTotalSalary(salaries). 
+  
+  Функция получает объект зарплат и считает общую сумму запрплаты работников.
+  Возвращает общую сумму зарплаты.
+  
+  Каждое поле объекта, передаваемого в функцию, имеет вид "имя":"зарплата"
+*/
+
+// Вызовы функции для проверки
+// console.log(countTotalSalary({})); // 0
+
+const countTotalSalary = object => {
+  let total = 0;
+  // console.log(object);
+  // for (let elem in object) {
+  //   console.log(object[elem]);
+  //   total += object[elem];
+  // }
+
+  const arr = Object.values(object);
+  for (let elem of arr) {
+    total += elem;
+  }
+
+  return total;
+};
+
+console.log(
+  countTotalSalary({
+    mango: 100,
+    poly: 150,
+    alfred: 80
+  })
+); // 330
